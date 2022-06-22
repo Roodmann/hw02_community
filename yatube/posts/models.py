@@ -14,7 +14,7 @@ class Post(models.Model):
     )
     group = models.ForeignKey(
         'Group',
-        on_delete=models.CASCADE,
+        on_delete=models.SET_NULL,
         blank=True,
         null=True,
         related_name='posts'
@@ -24,7 +24,7 @@ class Post(models.Model):
 class Group(models.Model):
     title = models.CharField(max_length=200)
     slug = models.SlugField(unique=True)
-    description = models.TextField(max_length=500)
+    description = models.TextField(max_length=150)
 
     def __str__(self):
         return self.title

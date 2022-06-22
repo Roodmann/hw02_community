@@ -15,7 +15,6 @@
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
     <meta name="msapplication-TileColor" content="#000">
     <meta name="theme-color" content="#ffffff">
-    <!-- Подключен файл со стандартными стилями бустрап -->
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
     <title>
       {% block title %}{% endblock %}
@@ -26,12 +25,10 @@
       {% include 'includes/header.html' %}      
     </header>
     <main>
+      <div class="container py-5">
       {% block content %}{% endblock %}
-    </main>
-    <!-- Использованы классы бустрапа: -->
-    <!-- border-top: создаёт тонкую линию сверху блока -->
-    <!-- text-center: выравнивает текстовые блоки внутри блока по центру -->
-    <!-- py-3: контент внутри размещается с отступом сверху и снизу -->         
+      </div>
+    </main>        
     <footer class="border-top text-center py-3">
       {% include 'includes/footer.html' %}
     </footer>
