@@ -2,8 +2,7 @@
 
 {% block title %}{{ title }}{% endblock %}
 
-{% block content %}  
- <div class="container py-5">     
+{% block content %}      
   <h1>{{ text }}</h1>
   {% for post in posts %}
   {%include 'posts/includes/post_text.html'%}
