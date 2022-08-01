@@ -19,6 +19,9 @@ class Post(models.Model):
         null=True,
         related_name='posts'
     )
+    def __str__(self):
+        # выводим текст поста 
+        return self.text 
 
 
 class Group(models.Model):
@@ -28,3 +31,7 @@ class Group(models.Model):
 
     def __str__(self):
         return self.title[:50]
+
+
+
+    
